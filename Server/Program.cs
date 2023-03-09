@@ -61,7 +61,11 @@ app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();
+app.UseBff();
+app.UseAuthorization();
 
+app.MapBffManagementEndpoints();
 
 app.MapRazorPages();
 app.MapControllers();
